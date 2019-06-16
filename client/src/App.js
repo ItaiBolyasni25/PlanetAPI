@@ -14,23 +14,21 @@ class App extends Component {
     this.getPlanets = this.getPlanets.bind(this);
   }
 
+  queryAPI(url) {
+    axios.get(url)
+    .then((req,res) => {
+      this.setState({planets: req.data});
+    })
+  }
 
   getPlanets() {
-    axios.get("http://localhost:5000/planets")
-    .then((req,res) => {
-      this.setState({planets : req.data});
-      console.log("Mounted " + JSON.stringify(req.data));
-    });
+    this.queryAPI("http://localhost:5000/planets");
   }
 
   getPlanet(e) {
     e.preventDefault();
     const planetName = e.target.elements.planetSearchName.value;
-    console.log(planetName);
-    axios.get(`http://localhost:5000/planets/${planetName}`)
-    .then((req,res) => {
-      this.setState({planets: req.data});
-    });
+    this.queryAPI(`http://localhost:5000/planets/${planetName}`);
   }
 
   componentDidMount() {
