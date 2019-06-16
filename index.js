@@ -24,8 +24,8 @@ app.use(session({secret: "secret", saveUninitialized: false, resave: true}));
 app.listen(5000, () => {
     console.log("Server is up an listening on port 5000...");
     // Build the in-memory database
-    const planet1 = { name: "Earth", SolarSystem: "Solar System"};
-    const planet2 = { name: "Mars", SolarSystem: "Solar System"};
+    const planet1 = { name: "Earth", SolarSystem: "The Solar System"};
+    const planet2 = { name: "Mars", SolarSystem: "The Solar System"};
     const planet3 = { name: "Kepler 22B", SolarSystem: "Kepler"};
 
     planets.insert([planet1,planet2,planet3]);
