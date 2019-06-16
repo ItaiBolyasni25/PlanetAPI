@@ -61,8 +61,8 @@ app.get("/", (req,res) => {
 app.post("/planets/create", (req,res) => {
     console.log("Responing to /planets/create");
     //Create a new planet and add it to the db
-    req.check('planetName', "Planet name is too short!").isLength({min: 4});
-    req.check('planetName', "Solar system name is too short!").isLength({min: 4});
+    req.check('planetName', "Planet name is too short!").isLength({min: 3});
+    req.check('planetName', "Solar system name is too short!").isLength({min: 3});
     var errors = req.validationErrors();
     if (errors) {
         req.session.errors = errors;
@@ -80,7 +80,7 @@ app.get("/planets/:planetName", (req,res) => {
     //Find a planet in the database
     console.log("Responding to /planets/:id GET" + req.params.planetName);
     //Search by planet name case insensitive
-    var searchRegex = new RegExp(req.params.planetName, 'i');
+    var searchRegex = new RegExp(`^${req.params.planetName}.*`, 'i');
     var planet = planets.find({name: {'$regex': searchRegex}});
     res.json(planet);
     res.end();

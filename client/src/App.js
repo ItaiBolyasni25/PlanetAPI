@@ -72,9 +72,9 @@ class App extends Component {
                   this.state.planets.map((element) => {
                   return (
                     <tr>
-                      <td style={{width: "50px"}} key={element.$loki}>{element.$loki}</td>
-                      <td key={element.name}>{element.name}</td>
-                      <td key={element.SolarSystem}>{element.SolarSystem}</td>
+                      <td style={{width: "50px"}} key={"id"+element.$loki}>{element.$loki}</td>
+                      <td key={"name"+element.name}>{element.name}</td>
+                      <td key={"system"+element.SolarSystem}>{element.SolarSystem}</td>
                     </tr>
                   )
                   
