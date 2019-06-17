@@ -65,6 +65,9 @@ app.post("/planets/create", (req,res) => {
     req.check('planetName', "Solar system name is too short!").isLength({min: 3});
     var errors = req.validationErrors();
     if (errors) {
+		errors.forEach((error) => {
+			console.log(error);
+		});
         req.session.errors = errors;
         res.redirect("/");
     } else {
