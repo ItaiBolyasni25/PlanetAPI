@@ -1,0 +1,88 @@
+body {
+  background: url('https://i.pinimg.com/originals/7b/14/6f/7b146fcb07281a251cda5766260986c2.jpg');
+  background-position: center;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+}
+.App {
+  background: white;
+  min-height: 650px;
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+transition: all 1s;
+}
+
+#welcomeText {
+  min-height:600px;
+  line-height: 20px;
+  padding-top: 125px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-right: 2px dashed rgba(0,0,0,0.5);
+}
+
+#welcomeText h2 {
+  padding-bottom: 20px;
+}
+
+#mainSection {
+  margin-top: 10px;
+}
+
+#mainSection h3 {
+  font-size: 30px;
+  text-align: left;
+}
+
+#planetSearchForm {
+  margin-top: 25px;
+}
+
+.searchField {
+  width: 300px;
+  padding: 5px;
+  padding-top:2px;
+  margin-right: 10px;
+}
+
+.searchBtn {
+  padding: 5px;
+  width: 100px;
+}
+
+.searchBtnLarge {
+  width: 250px;
+}
+
+#collapsedForm {
+  margin-bottom: 10px;
+}
+
+#planetList {
+  margin-top: 20px;
+}
+
+#planetList ul {
+  list-style-type: none;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
